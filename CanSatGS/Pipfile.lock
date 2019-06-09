@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4539b6894e2481759997df5fe4ddcb34fedabcdbdb7750f9a00f594f99d726a1"
+            "sha256": "db842da6ef0ae9e8587a96a559e09ba77aafffd1f1127ccda6e56d03eca9a6dd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,16 +44,6 @@
             ],
             "index": "pypi",
             "version": "==1.16.4"
-        },
-        "numpy-quaternion": {
-            "hashes": [
-                "sha256:098c9d7b44e280a57687a065824ca3bea175b495348cf58cfdf33480ded17609",
-                "sha256:6718ded4a44e925a17522451a382680f1c4f754b38389dc900d55731a1bc518a",
-                "sha256:6738a3ced78cd910ca79528d154c28c0165b5a682c8882258b60c77ec88d39f3",
-                "sha256:8f82c9e7ddcecb2b2b50a7d455bfb8fdd80a037a2da406ecc4e7b00b1de96e9e"
-            ],
-            "index": "pypi",
-            "version": "==2019.5.24.16.21.1"
         },
         "numpy-stl": {
             "hashes": [

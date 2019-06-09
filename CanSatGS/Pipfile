@@ -10,7 +10,6 @@ pyopengl-accelerate = "*"
 "pyqt5" = "*"
 pyserial = "*"
 numpy = "*"
-numpy-quaternion = "*"
 pillow = "*"
 numpy-stl = "*"
 

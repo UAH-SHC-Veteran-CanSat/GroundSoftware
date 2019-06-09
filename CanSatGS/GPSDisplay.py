@@ -10,9 +10,10 @@ from stl import mesh
 import GLViewWidgetFix
 
 
+
 class GPSDisplay(QWidget):
 
-    def __init__(self, lat_key, lon_key, alt_key, image_name="", lat_min=0, lat_max=0, lon_min=0, lon_max=0, max_points=250):
+    def __init__(self, lat_key, lon_key, alt_key, sats_key, image_name="", lat_min=0, lat_max=0, lon_min=0, lon_max=0, max_points=250):
         super().__init__()
 
         self.image_name = image_name
@@ -20,6 +21,7 @@ class GPSDisplay(QWidget):
         self.lat_key = lat_key
         self.lon_key = lon_key
         self.alt_key = alt_key
+        self.sats_key = sats_key
 
         self.lat_min = lat_min
         self.lat_max = lat_max
@@ -100,15 +102,23 @@ class GPSDisplay(QWidget):
         self.clear_btn.setParent(self.view)
         self.clear_btn.clicked.connect(self.clear_plot)
 
-        layout.addWidget(self.view, 0, 0, 1, 3)
-        layout.addWidget(self.clear_btn, 1, 2)
+        self.sats_label = QLineEdit("0")
+        self.sats_label.setAlignment(Qt.AlignCenter);
+        self.sats_label.setReadOnly(True)
+        self.sats_label.setToolTip("Number of Satellites")
+        self.sats_label.setMaximumWidth(50)
+
+        layout.addWidget(self.view, 0, 0, 1, 4)
+        layout.addWidget(self.clear_btn, 1, 3)
         layout.addWidget(self.view_btn, 1, 0)
         layout.addWidget(self.coords_label, 1, 1)
+        layout.addWidget(self.sats_label, 1, 2)
 
 
 
     def update_plot(self, dictionary):
         self.coords_label.setText(f"{dictionary[self.lat_key]:.5f},{dictionary[self.lon_key]:.5f}")
+        self.sats_label.setText(f"{dictionary[self.sats_key]:02.0f}")
         if dictionary[self.lat_key] != 0 and dictionary[self.lon_key] != 0:
             self.x_points = np.append(self.x_points, -(dictionary[self.lat_key]-(self.lat_min+self.lat_max)/2) * self.meters_per_lat)
             self.y_points = np.append(self.y_points, (dictionary[self.lon_key]-(self.lon_min+self.lon_max)/2) * self.meters_per_lon)

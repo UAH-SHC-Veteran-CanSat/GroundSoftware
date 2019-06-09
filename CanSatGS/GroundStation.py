@@ -103,15 +103,15 @@ class Screen(QWidget):
             lon_max = -86.6266
             image_name = "HuntsvilleCropped.png"
 
-        self.gps_disp = GPSDisplay.GPSDisplay("gps_latitude", "gps_longitude", "gps_altitude",
+        self.gps_disp = GPSDisplay.GPSDisplay("gps_latitude", "gps_longitude", "gps_altitude", "gps_sats",
                                               lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max,
-                                              image_name=image_name, max_points=100)  # Stevenville
+                                              image_name=image_name, max_points=100)
         self.parser.parsed.connect(self.gps_disp.update_plot)
 
         self.model_disp = ModelDisplay.ModelDisplay("gps_latitude", "gps_longitude", "altitude", "blade_spin_rate",
                                                     "software_state", "roll", "pitch", "bonus_direction",
                                                     lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max,
-                                                    image_name=image_name, max_points=100)  # Stevenville
+                                                    image_name=image_name, max_points=100)
         self.parser.parsed.connect(self.model_disp.update_plot)
 
         self.parser.packet.connect(self.log_w.log_packet)

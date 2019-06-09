@@ -3,6 +3,7 @@ import time
 from statistics import mean
 
 import numpy as np
+from numpy import cos, sin
 from PIL import Image
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -76,6 +77,7 @@ def rotation_matrix(axis, theta):
                      [2 * (bc - ad), aa + cc - bb - dd, 2 * (cd + ab)],
                      [2 * (bd + ac), 2 * (cd - ab), aa + dd - bb - cc]])
 
+
 def rotate_rpy(item, roll, pitch, yaw):
 
     roll = np.deg2rad(roll)
@@ -99,6 +101,7 @@ def rotate_rpy(item, roll, pitch, yaw):
     transform = Transform3D(matrix)
     item.applyTransform(transform, True)
 
+
 def rotate_inv_rpy(item, roll, pitch, yaw):
 
     roll = np.deg2rad(roll)
@@ -118,6 +121,57 @@ def rotate_inv_rpy(item, roll, pitch, yaw):
               np.cos(pitch)*np.cos(yaw),
               0],
               [0, 0, 0, 1]])
+
+    inverse = np.linalg.inv(matrix)
+
+    matrixList = inverse.flatten().tolist()
+
+    transform = Transform3D(matrixList)
+    item.applyTransform(transform, True)
+
+
+def rotate_ypr(item, roll, pitch, yaw):
+
+    r = np.deg2rad(roll)
+    p = np.deg2rad(pitch)
+    y = np.deg2rad(yaw)
+
+    matrix = [cos(p) * cos(y),
+              -cos(p) * sin(y),
+              sin(p),
+              0,
+              cos(r) * sin(y) + sin(p) * sin(r) * cos(y),
+              cos(r) * cos(y) - sin(p) * sin(r) * sin(y),
+              -cos(p) * sin(r),
+              0,
+              sin(r) * sin(y) - sin(p) * cos(r) * cos(y),
+              sin(p) * cos(r) * sin(y) + sin(r) * cos(y),
+              cos(p) * cos(r),
+              0,
+              0, 0, 0, 1]
+
+    transform = Transform3D(matrix)
+    item.applyTransform(transform, True)
+
+
+def rotate_inv_ypr(item, roll, pitch, yaw):
+    r = np.deg2rad(roll)
+    p = np.deg2rad(pitch)
+    y = np.deg2rad(yaw)
+
+    matrix = [[cos(p) * cos(y),
+               -cos(p) * sin(y),
+               sin(p),
+               0],
+              [cos(r) * sin(y) + sin(p) * sin(r) * cos(y),
+               cos(r) * cos(y) - sin(p) * sin(r) * sin(y),
+               -cos(p) * sin(r),
+               0],
+              [sin(r) * sin(y) - sin(p) * cos(r) * cos(y),
+               sin(p) * cos(r) * sin(y) + sin(r) * cos(y),
+               cos(p) * cos(r),
+               0],
+              [0, 0, 0, 1]]
 
     inverse = np.linalg.inv(matrix)
 
@@ -480,17 +534,17 @@ class ModelDisplay(QWidget):
             self.chute.hide()
 
         self.last_sat_rot = self.sat_rot
-        self.sat_rot = [dictionary[self.yaw_key], dictionary[self.pitch_key], dictionary[self.roll_key]]
+        self.sat_rot = [180-dictionary[self.yaw_key], dictionary[self.pitch_key], 360-dictionary[self.roll_key]]
 
         self.last_roc_rot = self.roc_rot
         if not self.roc_detach:
-            self.roc_rot = [dictionary[self.yaw_key], dictionary[self.pitch_key], dictionary[self.roll_key]]
+            self.roc_rot = [180-dictionary[self.yaw_key], dictionary[self.pitch_key], 360-dictionary[self.roll_key]]
         else:
             self.roc_rot[:] = [x - (x * 0.25) for x in self.roc_rot]
 
         self.last_can_rot = self.can_rot
         if not self.can_detach:
-            self.can_rot = [dictionary[self.yaw_key], dictionary[self.pitch_key], dictionary[self.roll_key]]
+            self.can_rot = [180-dictionary[self.yaw_key], dictionary[self.pitch_key], 360-dictionary[self.roll_key]]
         else:
             self.can_rot[:] = [x - (x * 0.25) for x in self.can_rot]
 
