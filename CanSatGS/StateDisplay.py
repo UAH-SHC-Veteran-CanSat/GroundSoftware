@@ -56,8 +56,11 @@ class StateDisplay(QWidget):
 
         self.packet_box.setText(str(int(dictionary[self.packet_key])))
 
-        utc_text = str(dictionary[self.utc_key])
-        utc_text = utc_text[0:2]+":"+utc_text[2:4]+":"+utc_text[4:6]
+        utc_time = int(dictionary[self.utc_key])
+        utc_seconds = str(int(utc_time % 60)).zfill(2)
+        utc_minutes = str(int((int(utc_time/60)) % 60)).zfill(2)
+        utc_hours = str(int((utc_time/60)/60)).zfill(2)
+        utc_text = utc_hours+":"+utc_minutes+":"+utc_seconds
         self.utc_box.display(utc_text)
 
         met_time = dictionary[self.met_key]

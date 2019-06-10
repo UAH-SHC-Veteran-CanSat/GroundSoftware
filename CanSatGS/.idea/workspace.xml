@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b28848e-5b31-4e6e-8804-518448cf1961" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CanSatGS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CanSatGS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GPSDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/GPSDisplay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommsParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommsParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroundStation.py" beforeDir="false" afterPath="$PROJECT_DIR$/GroundStation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModelDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelDisplay.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreCommandWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/MoreCommandWidget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/StateDisplay.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GroundStation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="88" column="83" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="83" />
+            <state relative-caret-position="197">
+              <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StateDisplay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="870">
+              <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -47,17 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CommsParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Pipfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="960">
+              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -65,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="1665">
               <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
             </state>
           </provider>
@@ -115,7 +110,6 @@
         <option value="$PROJECT_DIR$/PacketGraph.py" />
         <option value="$PROJECT_DIR$/StateDisplayWidget.py" />
         <option value="$PROJECT_DIR$/MyGLViewWidget.py" />
-        <option value="$PROJECT_DIR$/StateDisplay.py" />
         <option value="$PROJECT_DIR$/SerialComms.py" />
         <option value="$PROJECT_DIR$/QTabWidgetResize.py" />
         <option value="$PROJECT_DIR$/GSProfiler.py" />
@@ -123,12 +117,13 @@
         <option value="$PROJECT_DIR$/CommsLog.py" />
         <option value="$PROJECT_DIR$/GLViewWidgetFix.py" />
         <option value="$PROJECT_DIR$/CommandWidget.py" />
-        <option value="$PROJECT_DIR$/GroundStation.py" />
         <option value="$PROJECT_DIR$/MoreCommandWidget.py" />
         <option value="$PROJECT_DIR$/ModelDisplay.py" />
         <option value="$PROJECT_DIR$/GPSDisplay.py" />
-        <option value="$PROJECT_DIR$/CommsParser.py" />
         <option value="$PROJECT_DIR$/Pipfile" />
+        <option value="$PROJECT_DIR$/CommsParser.py" />
+        <option value="$PROJECT_DIR$/StateDisplay.py" />
+        <option value="$PROJECT_DIR$/GroundStation.py" />
       </list>
     </option>
   </component>
@@ -144,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,6 +150,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,6 +227,14 @@
       <option name="presentableId" value="Default" />
       <updated>1558297871925</updated>
     </task>
+    <task id="LOCAL-00001" summary="Minor fixes and additions">
+      <created>1560112217844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560112217845</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -248,7 +251,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49891067" visible="true" weight="0.2494043" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49891067" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="2" sideWeight="0.50108933" side_tool="true" weight="0.2494043" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -265,6 +268,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Minor fixes and additions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes and additions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.local/share/virtualenvs/CanSatGS-jzPA1f_n/lib/python3.6/site-packages/pyqtgraph/Qt.py">
@@ -363,16 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StateDisplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QTabWidgetResize.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -446,9 +443,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SerialComms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-1595">
           <caret lean-forward="true" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
@@ -466,6 +470,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CommsParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MoreCommandWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -476,34 +494,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
+    <entry file="file://$PROJECT_DIR$/StateDisplay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
+        <state relative-caret-position="870">
+          <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GroundStation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="88" column="83" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="83" />
+        <state relative-caret-position="197">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CommsParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>

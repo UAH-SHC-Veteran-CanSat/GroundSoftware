@@ -56,10 +56,13 @@ class CommsParser(QObject):
         output_dict = {}
 
         for i in range(0, len(self.names)):
-            if type(self.exponents[i]) is int:
-                output_dict[self.names[i]] = float(value_array[i]) * 10.0**float(self.exponents[i])
-            else:
-                output_dict[self.names[i]] = value_array[i]
+            try:
+                if type(self.exponents[i]) is int:
+                    output_dict[self.names[i]] = float(value_array[i]) * 10.0**float(self.exponents[i])
+                else:
+                    output_dict[self.names[i]] = value_array[i]
+            except:
+                print("Parse failure\n")
 
         self.parsed.emit(output_dict)
         self.packet.emit(text)

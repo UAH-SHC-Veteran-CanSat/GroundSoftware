@@ -15,7 +15,7 @@ from MoreCommandWidget import MoreCommandWidget
 from QTabWidgetResize import QTabWidgetResize
 
 
-huntsville = False
+huntsville = True
 
 
 class Screen(QWidget):
@@ -29,14 +29,14 @@ class Screen(QWidget):
                                                "temp", "voltage", "gps_time", "gps_latitude", "gps_longitude",
                                                "gps_altitude", "gps_sats", "pitch", "roll", "blade_spin_rate",
                                                "software_state", "bonus_direction"],
-                                              [0, -2, 0, -1, 0, -1, -2, 0, -5, -5, -1, 0, 0, 0, 0, "str", 0])
+                                              [0, 0, 0, -1, 0, -1, -2, 0, -5, -5, -1, 0, -1, -1, 0, "str", -1])
         self.comm_w.received.connect(self.parser.parse)
         self.log_w = CommsLog.CommsLog()
         self.parser.csv_headers.connect(self.log_w.set_headers)
         self.cmds = CommandWidget.CommandWidget({"Arm for launch": "ARM",
                                                  "Soft Reset": "RESET",
                                                  "Calibrate IMU": "CALIBRATE_IMU",
-                                                 "Calibrate Barometer": "CALIBRATE_BAROMETER",
+                                                 "Calibrate Barometer": "CAL_ALT",
                                                  "Close Release": "LOCK",
                                                  "Open Release": "ABORT"})
 
