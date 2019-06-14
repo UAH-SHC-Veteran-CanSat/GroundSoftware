@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5b28848e-5b31-4e6e-8804-518448cf1961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommsParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/CommsParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroundStation.py" beforeDir="false" afterPath="$PROJECT_DIR$/GroundStation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StateDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/StateDisplay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModelDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelDisplay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/defaultCSV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/defaultCSV.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/defaultRaw.txt" beforeDir="false" afterPath="$PROJECT_DIR$/defaultRaw.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GroundStation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+            <state relative-caret-position="221">
+              <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -39,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9210">
-              <caret line="627" column="18" selection-start-line="627" selection-start-column="18" selection-end-line="627" selection-end-column="18" />
+            <state relative-caret-position="8685">
+              <caret line="592" column="72" selection-start-line="592" selection-start-column="72" selection-end-line="592" selection-end-column="72" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -69,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MoreCommandWidget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
+            <state relative-caret-position="735">
               <caret line="49" column="122" selection-start-line="49" selection-start-column="122" selection-end-line="49" selection-end-column="122" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -118,11 +119,11 @@
         <option value="$PROJECT_DIR$/GLViewWidgetFix.py" />
         <option value="$PROJECT_DIR$/CommandWidget.py" />
         <option value="$PROJECT_DIR$/MoreCommandWidget.py" />
-        <option value="$PROJECT_DIR$/ModelDisplay.py" />
         <option value="$PROJECT_DIR$/GPSDisplay.py" />
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/CommsParser.py" />
         <option value="$PROJECT_DIR$/StateDisplay.py" />
+        <option value="$PROJECT_DIR$/ModelDisplay.py" />
         <option value="$PROJECT_DIR$/GroundStation.py" />
       </list>
     </option>
@@ -139,17 +140,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CanSatGS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CanSatGS" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -234,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560112217845</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Minor fixes and additions">
+      <created>1560143055452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560143055452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -248,7 +246,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49891067" visible="true" weight="0.2494043" />
@@ -259,7 +256,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.329927" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.329927" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -460,10 +457,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StateDisplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9210">
-          <caret line="627" column="18" selection-start-line="627" selection-start-column="18" selection-end-line="627" selection-end-column="18" />
+        <state relative-caret-position="8685">
+          <caret line="592" column="72" selection-start-line="592" selection-start-column="72" selection-end-line="592" selection-end-column="72" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -486,7 +490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MoreCommandWidget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
+        <state relative-caret-position="735">
           <caret line="49" column="122" selection-start-line="49" selection-start-column="122" selection-end-line="49" selection-end-column="122" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -494,17 +498,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StateDisplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GroundStation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="221">
+          <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

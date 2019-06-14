@@ -590,7 +590,7 @@ class ModelDisplay(QWidget):
 
     def refresh(self):
         lerp_pct = min((current_milli_time()-self.update_last_time)/self.update_dt, 1)
-        self.rotor.rotate(self.blade_rate*100/1000, 0, 0, 1)
+        self.rotor.rotate(self.blade_rate*(self.timer.interval()/1000)*6, 0, 0, 1)
         if self.blades_deployed:
             self.last_deploy_angle = self.deploy_angle
             self.deploy_angle = min(self.deploy_angle + 5, 90)

@@ -15,7 +15,7 @@ from MoreCommandWidget import MoreCommandWidget
 from QTabWidgetResize import QTabWidgetResize
 
 
-huntsville = True
+huntsville = False
 
 
 class Screen(QWidget):
@@ -34,10 +34,12 @@ class Screen(QWidget):
         self.log_w = CommsLog.CommsLog()
         self.parser.csv_headers.connect(self.log_w.set_headers)
         self.cmds = CommandWidget.CommandWidget({"Arm for launch": "ARM",
+                                                 "Un-Arm": "STATE/0",
                                                  "Soft Reset": "RESET",
-                                                 "Calibrate IMU": "CALIBRATE_IMU",
+                                                 "Hard Reset": "HARD_RESET",
+                                                 "Calibrate IMU": "CAL_IMU",
                                                  "Calibrate Barometer": "CAL_ALT",
-                                                 "Close Release": "LOCK",
+                                                 "Close Release": "CLOSE",
                                                  "Open Release": "ABORT"})
 
         self.more_cmds = MoreCommandWidget()
