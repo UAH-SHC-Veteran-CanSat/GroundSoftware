@@ -13,14 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GroundStation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1293">
-              <caret line="182" column="47" lean-forward="true" selection-start-line="182" selection-start-column="47" selection-end-line="182" selection-end-column="47" />
+            <state relative-caret-position="-647">
+              <caret line="117" column="83" selection-start-line="117" selection-start-column="83" selection-end-line="117" selection-end-column="83" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GSGraph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -34,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4920">
-              <caret line="574" column="91" selection-start-line="574" selection-start-column="91" selection-end-line="574" selection-end-column="91" />
+            <state relative-caret-position="209">
+              <caret line="568" column="91" selection-start-line="568" selection-start-column="91" selection-end-line="568" selection-end-column="91" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -111,7 +120,6 @@
         <option value="$PROJECT_DIR$/SerialComms.py" />
         <option value="$PROJECT_DIR$/QTabWidgetResize.py" />
         <option value="$PROJECT_DIR$/GSProfiler.py" />
-        <option value="$PROJECT_DIR$/GSGraph.py" />
         <option value="$PROJECT_DIR$/CommsLog.py" />
         <option value="$PROJECT_DIR$/GLViewWidgetFix.py" />
         <option value="$PROJECT_DIR$/CommandWidget.py" />
@@ -121,6 +129,7 @@
         <option value="$PROJECT_DIR$/CommsParser.py" />
         <option value="$PROJECT_DIR$/StateDisplay.py" />
         <option value="$PROJECT_DIR$/GroundStation.py" />
+        <option value="$PROJECT_DIR$/GSGraph.py" />
         <option value="$PROJECT_DIR$/ModelDisplay.py" />
       </list>
     </option>
@@ -137,7 +146,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CanSatGS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CanSatGS" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -243,7 +262,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560566278172</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed can phasing through ground">
+      <created>1560567382204</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560567382204</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Small changes">
+      <created>1560568459037</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560568459037</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -282,7 +315,9 @@
     <MESSAGE value="Minor fixes and additions" />
     <MESSAGE value="Flight ready?" />
     <MESSAGE value="Adding more commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding more commands" />
+    <MESSAGE value="Fixed can phasing through ground" />
+    <MESSAGE value="Small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.local/share/virtualenvs/CanSatGS-jzPA1f_n/lib/python3.6/site-packages/pyqtgraph/Qt.py">
@@ -434,16 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GSGraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CommandWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -485,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MoreCommandWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -502,22 +520,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
+    <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4920">
-          <caret line="574" column="91" selection-start-line="574" selection-start-column="91" selection-end-line="574" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1665">
+          <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GSGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GroundStation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1293">
-          <caret line="182" column="47" lean-forward="true" selection-start-line="182" selection-start-column="47" selection-end-line="182" selection-end-column="47" />
+        <state relative-caret-position="-647">
+          <caret line="117" column="83" selection-start-line="117" selection-start-column="83" selection-end-line="117" selection-end-column="83" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="568" column="91" selection-start-line="568" selection-start-column="91" selection-end-line="568" selection-end-column="91" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

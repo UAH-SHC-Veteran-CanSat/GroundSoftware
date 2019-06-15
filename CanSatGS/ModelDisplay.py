@@ -566,7 +566,7 @@ class ModelDisplay(QWidget):
 
         self.last_roc_pos = self.roc_pos
         if not self.roc_detach:
-            self.roc_pos = [self.x_points[-1], self.y_points[-1], self.z_points[-1]]
+            self.roc_pos = [self.x_points[-1], self.y_points[-1], max(self.z_points[-1], 0)]
         else:
             self.roc_pos = [self.roc_pos[0], self.roc_pos[1], max(self.roc_pos[2] - 5, 0)]
 
