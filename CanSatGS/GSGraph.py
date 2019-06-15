@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import *
 
 class GSGraph(QWidget):
 
-    def __init__(self, x_key, y_key, max_points=250, title="", x_units="", y_units=""):
+    def __init__(self, x_key, y_key, max_points=600, title="", x_units="", y_units=""):
         super().__init__()
 
         self.x_data = np.array([])

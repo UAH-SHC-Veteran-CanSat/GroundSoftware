@@ -48,7 +48,9 @@ class Screen(QWidget):
                                                            "Start PID": "PIDSTART",
                                                            "Stop PID": "PIDSTOP",
                                                            "Fast TX Rate": "RATE/100",
-                                                           "Slow TX Rate": "RATE/1000"})
+                                                           "Slow TX Rate": "RATE/1000",
+                                                           "EMERGENCY RELEASE": "STATE/4",
+                                                           "Say Hi to CanSat": "Hi CanSat, how are you?"})
 
         self.alt_plot = GSGraph.GSGraph("mission_time", "altitude",
                                         title="Altitude", x_units="Seconds", y_units="Meters")
@@ -113,7 +115,7 @@ class Screen(QWidget):
 
         self.gps_disp = GPSDisplay.GPSDisplay("gps_latitude", "gps_longitude", "gps_altitude", "gps_sats",
                                               lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max,
-                                              image_name=image_name, max_points=100)
+                                              image_name=image_name, max_points=300)
         self.parser.parsed.connect(self.gps_disp.update_plot)
 
         self.model_disp = ModelDisplay.ModelDisplay("gps_latitude", "gps_longitude", "altitude", "blade_spin_rate",
@@ -183,8 +185,8 @@ class Screen(QWidget):
         botton_tabwidget.setSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
         botton_tabwidget.addTab(self.comm_w, "Connection Settings")
         botton_tabwidget.addTab(self.cmds, "Commands 1")
-        botton_tabwidget.addTab(self.more_cmds, "Commands 2")
-        botton_tabwidget.addTab(self.even_more_cmds, "Commands 3")
+        botton_tabwidget.addTab(self.even_more_cmds, "Commands 2")
+        botton_tabwidget.addTab(self.more_cmds, "Commands 3")
 
         bottom_layout_holder = QWidget()
         bottom_layout = QHBoxLayout(bottom_layout_holder)
