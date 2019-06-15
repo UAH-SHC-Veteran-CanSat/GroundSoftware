@@ -572,7 +572,7 @@ class ModelDisplay(QWidget):
 
         self.last_can_pos = self.can_pos
         if not self.can_detach:
-            self.can_pos = [self.x_points[-1], self.y_points[-1], self.z_points[-1]]
+            self.can_pos = [self.x_points[-1], self.y_points[-1], max(self.z_points[-1], 0)]
         else:
             self.can_pos = [self.can_pos[0], self.can_pos[1], max(self.can_pos[2] - 5, 0)]
 
