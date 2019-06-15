@@ -43,6 +43,12 @@ class Screen(QWidget):
                                                  "Open Release": "ABORT"})
 
         self.more_cmds = MoreCommandWidget()
+        self.even_more_cmds = CommandWidget.CommandWidget({"Start Camera": "CAMON",
+                                                           "Stop Camera": "CAMOFF",
+                                                           "Start PID": "PIDSTART",
+                                                           "Stop PID": "PIDSTOP",
+                                                           "Fast TX Rate": "RATE/100",
+                                                           "Slow TX Rate": "RATE/1000"})
 
         self.alt_plot = GSGraph.GSGraph("mission_time", "altitude",
                                         title="Altitude", x_units="Seconds", y_units="Meters")
@@ -124,6 +130,7 @@ class Screen(QWidget):
 
         self.cmds.command_sent.connect(self.comm_w.transmit)
         self.more_cmds.command_sent.connect(self.comm_w.transmit)
+        self.even_more_cmds.command_sent.connect(self.comm_w.transmit)
 
         layout = QVBoxLayout()
         self.setLayout(layout)
@@ -175,8 +182,9 @@ class Screen(QWidget):
         botton_tabwidget.setMinimumWidth(450)
         botton_tabwidget.setSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
         botton_tabwidget.addTab(self.comm_w, "Connection Settings")
-        botton_tabwidget.addTab(self.cmds, "Main Commands")
-        botton_tabwidget.addTab(self.more_cmds, "More Commands")
+        botton_tabwidget.addTab(self.cmds, "Commands 1")
+        botton_tabwidget.addTab(self.more_cmds, "Commands 2")
+        botton_tabwidget.addTab(self.even_more_cmds, "Commands 3")
 
         bottom_layout_holder = QWidget()
         bottom_layout = QHBoxLayout(bottom_layout_holder)
