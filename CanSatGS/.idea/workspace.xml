@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b28848e-5b31-4e6e-8804-518448cf1961" name="Default Changelist" comment="">
+    <list default="true" id="5b28848e-5b31-4e6e-8804-518448cf1961" name="Default Changelist" comment="Small changes">
+      <change afterPath="$PROJECT_DIR$/FileComms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroundStation.py" beforeDir="false" afterPath="$PROJECT_DIR$/GroundStation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModelDisplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModelDisplay.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GroundStation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-647">
-              <caret line="117" column="83" selection-start-line="117" selection-start-column="83" selection-end-line="117" selection-end-column="83" />
+            <state relative-caret-position="1536">
+              <caret line="127" column="63" lean-forward="true" selection-start-line="127" selection-start-column="63" selection-end-line="127" selection-end-column="63" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -35,19 +37,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StateDisplay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="568" column="91" selection-start-line="568" selection-start-column="91" selection-end-line="568" selection-end-column="91" />
+            <state relative-caret-position="254">
+              <caret line="542" column="90" selection-start-line="542" selection-start-column="90" selection-end-line="542" selection-end-column="90" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -56,19 +49,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CommsParser.py">
+        <entry file="file://$PROJECT_DIR$/SerialComms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+            <state relative-caret-position="342">
+              <caret line="137" column="33" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="137" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FileComms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
+        <entry file="file://$PROJECT_DIR$/CommsLog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1665">
-              <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
+            <state relative-caret-position="225">
+              <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -117,7 +122,6 @@
         <option value="$PROJECT_DIR$/PacketGraph.py" />
         <option value="$PROJECT_DIR$/StateDisplayWidget.py" />
         <option value="$PROJECT_DIR$/MyGLViewWidget.py" />
-        <option value="$PROJECT_DIR$/SerialComms.py" />
         <option value="$PROJECT_DIR$/QTabWidgetResize.py" />
         <option value="$PROJECT_DIR$/GSProfiler.py" />
         <option value="$PROJECT_DIR$/CommsLog.py" />
@@ -128,9 +132,11 @@
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/CommsParser.py" />
         <option value="$PROJECT_DIR$/StateDisplay.py" />
-        <option value="$PROJECT_DIR$/GroundStation.py" />
         <option value="$PROJECT_DIR$/GSGraph.py" />
+        <option value="$PROJECT_DIR$/SerialComms.py" />
         <option value="$PROJECT_DIR$/ModelDisplay.py" />
+        <option value="$PROJECT_DIR$/GroundStation.py" />
+        <option value="$PROJECT_DIR$/FileComms.py" />
       </list>
     </option>
   </component>
@@ -162,6 +168,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -276,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560568459037</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Small changes">
+      <created>1560570280441</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560570280441</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -459,16 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CommsLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CommandWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -486,27 +495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SerialComms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1595">
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StateDisplay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CommsParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -520,13 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GSGraph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -534,23 +519,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SerialComms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="137" column="33" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="137" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CommsParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPSDisplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="120" column="66" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CommsLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="542" column="90" selection-start-line="542" selection-start-column="90" selection-end-line="542" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GroundStation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-647">
-          <caret line="117" column="83" selection-start-line="117" selection-start-column="83" selection-end-line="117" selection-end-column="83" />
+        <state relative-caret-position="1536">
+          <caret line="127" column="63" lean-forward="true" selection-start-line="127" selection-start-column="63" selection-end-line="127" selection-end-column="63" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ModelDisplay.py">
+    <entry file="file://$PROJECT_DIR$/FileComms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="568" column="91" selection-start-line="568" selection-start-column="91" selection-end-line="568" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
         </state>
       </provider>
     </entry>

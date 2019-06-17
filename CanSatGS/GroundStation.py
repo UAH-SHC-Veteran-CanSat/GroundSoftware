@@ -9,6 +9,7 @@ import GPSDisplay
 import GSGraph
 import ModelDisplay
 import SerialComms as sc
+import FileComms as fc
 import StateDisplay
 import dark_fusion
 from MoreCommandWidget import MoreCommandWidget
@@ -25,12 +26,14 @@ class Screen(QWidget):
         self.setWindowTitle("Astrotrain Ground Station")
 
         self.comm_w = sc.SerialConnectionWidget()
+        self.file_w = fc.FileConnectionWidget()
         self.parser = CommsParser.CommsParser(["team_id", "mission_time", "packet_count", "altitude", "pressure",
                                                "temp", "voltage", "gps_time", "gps_latitude", "gps_longitude",
                                                "gps_altitude", "gps_sats", "pitch", "roll", "blade_spin_rate",
                                                "software_state", "bonus_direction"],
-                                              [0, 0, 0, -1, 0, -1, -2, 0, -5, -5, -1, 0, -1, -1, 0, "str", -1])
+                                              [0, -3, 0, -1, 0, -1, -2, 0, -5, -5, -1, 0, -1, -1, 0, "str", -1])
         self.comm_w.received.connect(self.parser.parse)
+        self.file_w.received.connect(self.parser.parse)
         self.log_w = CommsLog.CommsLog()
         self.parser.csv_headers.connect(self.log_w.set_headers)
         self.cmds = CommandWidget.CommandWidget({"Arm for launch": "ARM",
@@ -113,15 +116,15 @@ class Screen(QWidget):
             lon_max = -86.6266
             image_name = "HuntsvilleCropped.png"
 
-        self.gps_disp = GPSDisplay.GPSDisplay("gps_latitude", "gps_longitude", "gps_altitude", "gps_sats",
+        self.gps_disp = GPSDisplay.GPSDisplay("gps_latitude", "gps_longitude", "altitude", "gps_sats",
                                               lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max,
-                                              image_name=image_name, max_points=300)
+                                              image_name=image_name, max_points=600)
         self.parser.parsed.connect(self.gps_disp.update_plot)
 
         self.model_disp = ModelDisplay.ModelDisplay("gps_latitude", "gps_longitude", "altitude", "blade_spin_rate",
                                                     "software_state", "roll", "pitch", "bonus_direction",
                                                     lat_min=lat_min, lat_max=lat_max, lon_min=lon_min, lon_max=lon_max,
-                                                    image_name=image_name, max_points=100)
+                                                    image_name=image_name, max_points=600)
         self.parser.parsed.connect(self.model_disp.update_plot)
 
         self.parser.packet.connect(self.log_w.log_packet)
@@ -184,6 +187,7 @@ class Screen(QWidget):
         botton_tabwidget.setMinimumWidth(450)
         botton_tabwidget.setSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
         botton_tabwidget.addTab(self.comm_w, "Connection Settings")
+        botton_tabwidget.addTab(self.file_w, "File Reader")
         botton_tabwidget.addTab(self.cmds, "Commands 1")
         botton_tabwidget.addTab(self.even_more_cmds, "Commands 2")
         botton_tabwidget.addTab(self.more_cmds, "Commands 3")

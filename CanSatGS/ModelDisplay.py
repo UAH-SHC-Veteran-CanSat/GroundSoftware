@@ -351,6 +351,8 @@ class ModelDisplay(QWidget):
         rocket_mesh_data = opengl.MeshData(vertexes=rocket_mesh.vectors)
         self.rocket = opengl.GLMeshItem(meshdata=rocket_mesh_data, color=[235 / 255, 193 / 255, 153 / 255, 1], smooth=True)
         self.rocket.scale(1/1000, 1/1000, 1/1000)
+        self.rocket.rotate(180, 1, 0, 0, local=False)
+        self.rocket.translate(0, 0, 1.5)
         self.rocket.setShader(self.shader)
         self.view.addItem(self.rocket)
 
@@ -538,7 +540,7 @@ class ModelDisplay(QWidget):
 
         self.last_roc_rot = self.roc_rot
         if not self.roc_detach:
-            self.roc_rot = [180-dictionary[self.yaw_key], dictionary[self.pitch_key], 360-dictionary[self.roll_key]]
+            self.roc_rot = [-(180-dictionary[self.yaw_key]), -dictionary[self.pitch_key], (360-dictionary[self.roll_key])]
         else:
             self.roc_rot[:] = [x - (x * 0.25) for x in self.roc_rot]
 
@@ -551,7 +553,7 @@ class ModelDisplay(QWidget):
         if dictionary[self.lat_key] != 0 and dictionary[self.lon_key] != 0:
             self.x_points = np.append(self.x_points, -(dictionary[self.lat_key]-(self.lat_min+self.lat_max)/2) * self.meters_per_lat)
             self.y_points = np.append(self.y_points, (dictionary[self.lon_key]-(self.lon_min+self.lon_max)/2) * self.meters_per_lon)
-            self.z_points = np.append(self.z_points, dictionary[self.alt_key])
+            self.z_points = np.append(self.z_points, max(dictionary[self.alt_key],0))
 
         else:
             self.x_points = np.append(self.x_points, 0)
@@ -608,7 +610,7 @@ class ModelDisplay(QWidget):
         self.set_view(lerp_pos(self.last_view_pos, self.view_pos, lerp_pct))
         self.set_roc(lerp_pos(self.last_roc_pos, self.roc_pos, lerp_pct),
                      lerp_rot_signed(self.last_roc_rot, self.roc_rot, lerp_pct),
-                     [0,0,730])
+                     [0,0,770])
         self.set_sat(lerp_pos(self.last_sat_pos, self.sat_pos, lerp_pct),
                      lerp_rot_signed(self.last_sat_rot, self.sat_rot, lerp_pct),
                      [0,0,130])
